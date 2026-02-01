@@ -27,7 +27,11 @@
 </head>
 <body>
 
-
+  <!-- メイン遷移ボタン -->
+  <a class="btn"
+     href="https://jp.mercari.com/user/profile/101562431?utm_source=web&utm_medium=share">
+    メルカリへ進む
+  </a>
 
   <!-- 広告① -->
   <div class="ad">
@@ -39,13 +43,6 @@
       src="https://www12.a8.net/0.gif?a8mat=45FY5V+8G8IWI+5RJ4+5Z6WX">
   </div>
 
-  <!-- メイン遷移ボタン -->
-  <a class="btn"
-     href="https://www.instagram.com/moka41785?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-    instagramへ進む
-  </a>
-
-
   <!-- 広告②（ここに別の広告タグを貼る） -->
   <div class="ad">
     <a href="https://px.a8.net/svt/ejp?a8mat=45FYXS+F2ZCHE+5DMA+5ZU29" rel="nofollow">
@@ -55,4 +52,3 @@
 
 </body>
 </html>
-
