@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      text-align: center;
+      padding: 40px 16px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 24px 0;
+      padding: 14px 24px;
+      background: #ff4b4b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .ad {
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <!-- 広告① -->
+  <div class="ad">
+    <a href="https://px.a8.net/svt/ejp?a8mat=45FY5V+8G8IWI+5RJ4+5Z6WX" rel="nofollow">
+      <img width="300" height="250"
+        src="https://www29.a8.net/svt/bgt?aid=251006899511&wid=001&eno=01&mid=s00000026896001004000&mc=1">
+    </a>
+    <img width="1" height="1"
+      src="https://www12.a8.net/0.gif?a8mat=45FY5V+8G8IWI+5RJ4+5Z6WX">
+  </div>
+
+  <!-- メイン遷移ボタン -->
+  <a class="btn"
+     href="https://www.instagram.com/moka41785?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+    instagramへ進む
+  </a>
+
+
+  <!-- 広告②（ここに別の広告タグを貼る） -->
+  <div class="ad">
+    <a href="https://px.a8.net/svt/ejp?a8mat=45FYXS+F2ZCHE+5DMA+5ZU29" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=251007904912&wid=001&eno=01&mid=s00000025093001007000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=45FYXS+F2ZCHE+5DMA+5ZU29" alt="">
+  </div>
+
+</body>
+</html>
