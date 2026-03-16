@@ -10,37 +10,12 @@
 body{
   font-family:-apple-system,BlinkMacSystemFont,sans-serif;
   text-align:center;
+  margin:0;
   padding:40px 16px;
-  max-width:420px;
-  margin:auto;
-  background:#fafafa;
-}
-
-h1{
-  font-size:22px;
-  margin-bottom:30px;
-}
-
-.ad{
-  margin:28px 0;
-}
-
-.ad img{
-  max-width:100%;
-  height:auto;
-  border-radius:8px;
-}
-
-.ad iframe{
-  width:100%;
-  max-width:100%;
-  height:auto;
-  border:none;
 }
 
 .btn{
   display:inline-block;
-  margin-top:40px;
   padding:16px 28px;
   background:#ff4b4b;
   color:#fff;
@@ -50,47 +25,96 @@ h1{
   font-weight:bold;
 }
 
-</style>
+/* 全画面広告 */
+#adOverlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  z-index:9999;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
 
+/* 閉じるボタン */
+#closeBtn{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:#fff;
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  font-size:18px;
+  cursor:pointer;
+  border:none;
+}
+
+/* 広告 */
+.ad{
+  max-width:90%;
+  margin:20px 0;
+}
+
+.ad img{
+  max-width:100%;
+  height:auto;
+}
+
+.ad iframe{
+  width:100%;
+  max-width:100%;
+  border:none;
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>出会いを探している方へ</h1>
+<!-- 全画面広告 -->
+<div id="adOverlay">
 
-<!-- 広告1 -->
+<button id="closeBtn">×</button>
+
 <div class="ad">
 <a href="https://pic-stash.com/index35.html?affid=239869" target="_blank">
-<img src="https://pixelarchivenow.com/ppc/ppc3-030612/36/9362036.jpg" title="バナー">
+<img src="https://pixelarchivenow.com/ppc/ppc3-030612/36/9362036.jpg">
 </a>
 </div>
 
-<!-- 広告2 -->
 <div class="ad">
 <iframe src="https://pic-stash.com/index109.html?affid=239869"
-width="950"
 height="250"
-scrolling="no"
-title="バナー">
-</iframe>
+scrolling="no"></iframe>
 </div>
 
-<!-- 広告3 -->
 <div class="ad">
 <iframe src="https://pic-stash.com/index2.html?affid=239869"
-width="300"
 height="250"
-scrolling="no"
-title="バナー">
-</iframe>
+scrolling="no"></iframe>
 </div>
 
-<!-- Instagramボタン -->
+</div>
+
+<h1>出会いを探している方へ</h1>
+
 <a class="btn"
 href="https://www.instagram.com/moka41785?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
 Instagramへ進む
 </a>
 
+<script>
+
+document.getElementById("closeBtn").onclick=function(){
+document.getElementById("adOverlay").style.display="none";
+}
+
+</script>
+
 </body>
 </html>
-
