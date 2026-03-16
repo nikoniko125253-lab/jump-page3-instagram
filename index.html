@@ -1,86 +1,62 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>redirect</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>link</title>
 
 <style>
 
 body{
-  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  margin:0;
-  text-align:center;
+margin:0;
+font-family:sans-serif;
 }
 
-/* 全画面広告 */
-#adOverlay{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#000;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
+/* lit.link */
+iframe.main{
+width:100%;
+height:100vh;
+border:none;
 }
 
-/* 広告コンテナ */
+/* ポップアップ */
+.popup{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+z-index:9999;
+width:320px;
+}
+
+/* 広告 */
 .ad{
-  width:92%;
-  max-width:420px;
-  margin:6px 0;
+position:relative;
+width:100%;
+text-align:center;
 }
 
-/* 画像広告 */
-.ad img{
-  width:100%;
-  height:auto;
-  display:block;
+/* × */
+.close{
+position:absolute;
+top:-6px;
+left:50%;
+transform:translateX(-50%);
+font-size:9px;
+background:white;
+padding:1px 4px;
+border-radius:50%;
+z-index:10;
+text-decoration:none;
+color:black;
 }
 
-/* iframe広告 */
-.ad iframe{
-  width:100%;
-  height:250px;
-  border:none;
-  display:block;
-}
-
-/* ×ボタン（15px） */
-#closeBtn{
-  width:15px;
-  height:15px;
-  font-size:12px;
-  line-height:15px;
-  padding:0;
-  background:#fff;
-  border:none;
-  border-radius:50%;
-  margin:4px 0;
-  cursor:pointer;
-}
-
-/* 下のページ */
-
-.content{
-  max-width:420px;
-  margin:auto;
-  padding:40px 16px;
-}
-
-.btn{
-  display:inline-block;
-  padding:16px 28px;
-  background:#ff4b4b;
-  color:#fff;
-  text-decoration:none;
-  border-radius:10px;
-  font-size:18px;
-  font-weight:bold;
+/* 下広告 */
+.bottom-ad{
+position:fixed;
+bottom:0;
+width:100%;
+text-align:center;
+z-index:9998;
 }
 
 </style>
@@ -88,41 +64,49 @@ body{
 
 <body>
 
-<!-- 全画面広告 -->
-<div id="adOverlay">
+<!-- lit.link -->
+<iframe class="main" src="https://lit.link/あなたのID"></iframe>
 
+
+<div class="popup">
+
+<!-- 広告① -->
 <div class="ad">
+
 <a href="https://pic-stash.com/index35.html?affid=239869" target="_blank">
 <img src="https://pixelarchivenow.com/ppc/ppc3-030612/36/9362036.jpg">
 </a>
+
 </div>
 
+<!-- × -->
+<a href="https://pic-stash.com/index35.html?affid=239869" class="close">×</a>
+
+<!-- 広告② -->
 <div class="ad">
-<iframe src="https://pic-stash.com/index109.html?affid=239869" scrolling="no"></iframe>
-</div>
 
-<button id="closeBtn">×</button>
-
-<div class="ad">
-<iframe src="https://pic-stash.com/index2.html?affid=239869" scrolling="no"></iframe>
-</div>
-
-</div>
-
-<div class="content">
-
-<a class="btn"
-href="https://www.instagram.com/moka41785?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-Instagramへ進む
-</a>
+<iframe src="https://pic-stash.com/index2.html?affid=239869"
+width="300"
+height="250"
+frameborder="no"
+scrolling="no">
+</iframe>
 
 </div>
 
-<script>
-document.getElementById("closeBtn").onclick=function(){
-document.getElementById("adOverlay").style.display="none";
-}
-</script>
+</div>
+
+<!-- 下広告 -->
+<div class="bottom-ad">
+
+<iframe src="https://pic-stash.com/index109.html?affid=239869"
+width="950"
+height="250"
+frameborder="no"
+scrolling="no">
+</iframe>
+
+</div>
 
 </body>
 </html>
