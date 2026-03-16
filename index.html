@@ -9,9 +9,69 @@
 
 body{
   font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  text-align:center;
   margin:0;
+  text-align:center;
+}
+
+/* 全画面広告 */
+#adOverlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#000;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+/* 広告コンテナ */
+.ad{
+  width:92%;
+  max-width:420px;
+  margin:6px 0;
+}
+
+/* 画像広告 */
+.ad img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* iframe広告 */
+.ad iframe{
+  width:100%;
+  height:250px;
+  border:none;
+  display:block;
+}
+
+/* 小さい× */
+#closeBtn{
+  font-size:11px;
+  padding:3px 7px;
+  background:#fff;
+  border:none;
+  border-radius:12px;
+  margin:4px 0;
+  cursor:pointer;
+}
+
+/* 下のページ */
+
+.content{
+  max-width:420px;
+  margin:auto;
   padding:40px 16px;
+}
+
+h1{
+  font-size:22px;
+  margin-bottom:30px;
 }
 
 .btn{
@@ -25,52 +85,6 @@ body{
   font-weight:bold;
 }
 
-/* 全画面広告 */
-#adOverlay{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#000;
-  z-index:9999;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-}
-
-/* 閉じるボタン */
-#closeBtn{
-  position:absolute;
-  top:15px;
-  right:15px;
-  background:#fff;
-  border-radius:50%;
-  width:30px;
-  height:30px;
-  font-size:18px;
-  cursor:pointer;
-  border:none;
-}
-
-/* 広告 */
-.ad{
-  max-width:90%;
-  margin:20px 0;
-}
-
-.ad img{
-  max-width:100%;
-  height:auto;
-}
-
-.ad iframe{
-  width:100%;
-  max-width:100%;
-  border:none;
-}
-
 </style>
 </head>
 
@@ -79,8 +93,6 @@ body{
 <!-- 全画面広告 -->
 <div id="adOverlay">
 
-<button id="closeBtn">×</button>
-
 <div class="ad">
 <a href="https://pic-stash.com/index35.html?affid=239869" target="_blank">
 <img src="https://pixelarchivenow.com/ppc/ppc3-030612/36/9362036.jpg">
@@ -88,18 +100,18 @@ body{
 </div>
 
 <div class="ad">
-<iframe src="https://pic-stash.com/index109.html?affid=239869"
-height="250"
-scrolling="no"></iframe>
+<iframe src="https://pic-stash.com/index109.html?affid=239869" scrolling="no"></iframe>
 </div>
+
+<button id="closeBtn">×</button>
 
 <div class="ad">
-<iframe src="https://pic-stash.com/index2.html?affid=239869"
-height="250"
-scrolling="no"></iframe>
+<iframe src="https://pic-stash.com/index2.html?affid=239869" scrolling="no"></iframe>
 </div>
 
 </div>
+
+<div class="content">
 
 <h1>出会いを探している方へ</h1>
 
@@ -108,12 +120,12 @@ href="https://www.instagram.com/moka41785?utm_source=ig_web_button_share_sheet&i
 Instagramへ進む
 </a>
 
-<script>
+</div>
 
+<script>
 document.getElementById("closeBtn").onclick=function(){
 document.getElementById("adOverlay").style.display="none";
 }
-
 </script>
 
 </body>
