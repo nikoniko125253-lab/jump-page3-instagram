@@ -70,19 +70,16 @@ z-index:9998;
 <!-- 上ポップアップ -->
 <div class="popup">
 
-<!-- 広告① -->
 <div class="ad">
 <a href="https://pic-stash.com/index35.html?affid=239869" target="_blank">
 <img src="https://pixelarchivenow.com/ppc/ppc3-030612/36/9362036.jpg">
 </a>
 </div>
 
-<!-- × -->
 <div class="closebox">
 <a href="https://pic-stash.com/index35.html?affid=239869">×</a>
 </div>
 
-<!-- 広告② -->
 <div class="ad">
 <iframe src="https://pic-stash.com/index2.html?affid=239869"
 width="300"
@@ -94,7 +91,6 @@ scrolling="no">
 
 </div>
 
-<!-- 下固定広告 -->
 <div class="bottom-ad">
 <iframe src="https://pic-stash.com/index109.html?affid=239869"
 width="950"
@@ -106,19 +102,17 @@ scrolling="no">
 
 <script>
 
-/* アクセス回数カウント */
-let visitCount = localStorage.getItem("visit_count");
+/* アクセス回数取得 */
+let visitCount = parseInt(localStorage.getItem("visit_count")) || 0;
 
-if(!visitCount){
-    visitCount = 1;
-}else{
-    visitCount = parseInt(visitCount) + 1;
-}
+/* カウント増やす */
+visitCount++;
 
+/* 保存 */
 localStorage.setItem("visit_count", visitCount);
 
-/* 3回目アクセスでInstagramへ */
-if(visitCount >= 3){
+/* 2回目でInstagramへ */
+if(visitCount === 2){
     window.location.href="https://www.instagram.com/moka41785?igsh=MXZlMjYwOGh6ejBlZQ%3D%3D&utm_source=qr";
 }
 
