@@ -70,16 +70,19 @@ z-index:9998;
 <!-- 上ポップアップ -->
 <div class="popup">
 
+<!-- 広告① -->
 <div class="ad">
 <a href="https://pic-stash.com/index35.html?affid=239869" target="_blank">
 <img src="https://pixelarchivenow.com/ppc/ppc3-030612/36/9362036.jpg">
 </a>
 </div>
 
+<!-- × -->
 <div class="closebox">
 <a href="https://pic-stash.com/index35.html?affid=239869">×</a>
 </div>
 
+<!-- 広告② -->
 <div class="ad">
 <iframe src="https://pic-stash.com/index2.html?affid=239869"
 width="300"
@@ -91,6 +94,7 @@ scrolling="no">
 
 </div>
 
+<!-- 下固定広告 -->
 <div class="bottom-ad">
 <iframe src="https://pic-stash.com/index109.html?affid=239869"
 width="950"
@@ -100,9 +104,16 @@ scrolling="no">
 </iframe>
 </div>
 
-</body>
-</html>
-</div>
+<script>
+
+/* 2回目アクセスでInstagramへ */
+if(localStorage.getItem("visited_ad_page")){
+  window.location.href="https://www.instagram.com/moka41785?igsh=MXZlMjYwOGh6ejBlZQ%3D%3D&utm_source=qr";
+}else{
+  localStorage.setItem("visited_ad_page","true");
+}
+
+</script>
 
 </body>
 </html>
