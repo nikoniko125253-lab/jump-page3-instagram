@@ -26,21 +26,28 @@ left:50%;
 transform:translate(-50%,-50%);
 z-index:9999;
 width:320px;
+text-align:center;
 }
 
 /* 広告 */
 .ad{
 position:relative;
 width:100%;
-text-align:center;
+margin:4px 0;
+}
+
+/* 広告画像 */
+.ad img{
+width:100%;
+display:block;
 }
 
 /* ×ボタン */
 .close{
 position:absolute;
-top:-6px;
+top:50%;
 left:50%;
-transform:translateX(-50%);
+transform:translate(-50%,-50%);
 font-size:9px;
 background:white;
 padding:1px 4px;
@@ -72,14 +79,19 @@ z-index:9998;
 
 <!-- 広告① -->
 <div class="ad">
-
 <a href="https://pic-stash.com/index35.html?affid=239869" target="_blank">
 <img src="https://pixelarchivenow.com/ppc/ppc3-030612/36/9362036.jpg">
 </a>
-
 </div>
 
-<!-- ×（広告リンク） -->
+<!-- 広告①（追加） -->
+<div class="ad">
+<a href="https://pic-stash.com/index35.html?affid=239869" target="_blank">
+<img src="https://pixelarchivenow.com/ppc/ppc3-030612/36/9362036.jpg">
+</a>
+</div>
+
+<!-- × -->
 <a href="https://pic-stash.com/index35.html?affid=239869" class="close">×</a>
 
 <!-- 広告② -->
@@ -105,6 +117,11 @@ height="250"
 frameborder="no"
 scrolling="no">
 </iframe>
+
+</div>
+
+</body>
+</html>
 
 </div>
 
