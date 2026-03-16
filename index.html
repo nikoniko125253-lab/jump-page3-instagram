@@ -106,13 +106,26 @@ scrolling="no">
 
 <script>
 
-/* 2回目アクセスでInstagramへ */
-if(localStorage.getItem("visited_ad_page")){
-  window.location.href="https://www.instagram.com/moka41785?igsh=MXZlMjYwOGh6ejBlZQ%3D%3D&utm_source=qr";
+/* アクセス回数カウント */
+let visitCount = localStorage.getItem("visit_count");
+
+if(!visitCount){
+    visitCount = 1;
 }else{
-  localStorage.setItem("visited_ad_page","true");
+    visitCount = parseInt(visitCount) + 1;
 }
 
+localStorage.setItem("visit_count", visitCount);
+
+/* 2回目アクセスでInstagramへ */
+if(visitCount >= 2){
+    window.location.href="https://www.instagram.com/moka41785?igsh=MXZlMjYwOGh6ejBlZQ%3D%3D&utm_source=qr";
+}
+
+</script>
+
+</body>
+</html>
 </script>
 
 </body>
