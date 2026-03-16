@@ -18,36 +18,29 @@ height:100vh;
 border:none;
 }
 
-/* 中央ポップアップ */
+/* 上ポップアップ */
 .popup{
 position:fixed;
-top:50%;
+top:20px;
 left:50%;
-transform:translate(-50%,-50%);
+transform:translateX(-50%);
 z-index:9999;
 width:320px;
-text-align:center;
 }
 
 /* 広告 */
 .ad{
 position:relative;
 width:100%;
-margin:4px 0;
-}
-
-/* 広告画像 */
-.ad img{
-width:100%;
-display:block;
+text-align:center;
 }
 
 /* ×ボタン */
 .close{
 position:absolute;
-top:50%;
+top:-6px;
 left:50%;
-transform:translate(-50%,-50%);
+transform:translateX(-50%);
 font-size:9px;
 background:white;
 padding:1px 4px;
@@ -74,7 +67,7 @@ z-index:9998;
 <!-- lit.link -->
 <iframe class="main" src="https://lit.link/moka0303"></iframe>
 
-
+<!-- 上ポップアップ -->
 <div class="popup">
 
 <!-- 広告① -->
@@ -84,45 +77,29 @@ z-index:9998;
 </a>
 </div>
 
-<!-- 広告①（追加） -->
-<div class="ad">
-<a href="https://pic-stash.com/index35.html?affid=239869" target="_blank">
-<img src="https://pixelarchivenow.com/ppc/ppc3-030612/36/9362036.jpg">
-</a>
-</div>
-
-<!-- × -->
+<!-- ×（広告リンク） -->
 <a href="https://pic-stash.com/index35.html?affid=239869" class="close">×</a>
 
 <!-- 広告② -->
 <div class="ad">
-
 <iframe src="https://pic-stash.com/index2.html?affid=239869"
 width="300"
 height="250"
 frameborder="no"
 scrolling="no">
 </iframe>
-
 </div>
 
 </div>
 
-<!-- 下広告 -->
+<!-- 下固定広告 -->
 <div class="bottom-ad">
-
 <iframe src="https://pic-stash.com/index109.html?affid=239869"
 width="950"
 height="250"
 frameborder="no"
 scrolling="no">
 </iframe>
-
-</div>
-
-</body>
-</html>
-
 </div>
 
 </body>
